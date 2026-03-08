@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — AI Bureau</title>
+<meta name="description" content="Privacy Policy for AI Bureau — how we collect, use, and protect your data.">
+<meta name="robots" content="noindex, follow">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23000'/><text x='4' y='24' font-family='serif' font-size='22' font-weight='900' fill='white'>AI</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#ffffff;--paper:#080808;--ink30:rgba(255,255,255,.3);
+  --ink50:rgba(255,255,255,.5);--border:rgba(255,255,255,.08);
+  --accent:#ffffff;
+}
+[data-theme="light"]{
+  --ink:#0a0a0a;--paper:#f5f4f0;--ink30:rgba(0,0,0,.3);
+  --ink50:rgba(0,0,0,.5);--border:rgba(0,0,0,.1);
+}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);color:var(--ink);
+  font-family:'DM Sans',sans-serif;font-weight:300;
+  font-size:15px;line-height:1.8;
+  min-height:100vh;
+}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  height:64px;display:flex;align-items:center;justify-content:space-between;
+  padding:0 48px;
+  background:rgba(8,8,8,.9);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+}
+[data-theme="light"] nav{background:rgba(245,244,240,.9)}
+.nav-logo{
+  font-family:'Bebas Neue',sans-serif;font-size:20px;
+  letter-spacing:.14em;color:var(--ink);
+  text-decoration:none;
+}
+.nav-logo span{opacity:.3}
+.nav-back{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink50);text-decoration:none;
+  transition:color .3s;
+}
+.nav-back:hover{color:var(--ink)}
+.nav-back svg{transition:transform .3s}
+.nav-back:hover svg{transform:translateX(-3px)}
+.theme-btn{
+  width:36px;height:20px;background:rgba(255,255,255,.1);
+  border:1px solid var(--border);border-radius:10px;cursor:pointer;
+  position:relative;transition:background .3s;
+  display:flex;align-items:center;padding:2px;
+}
+.theme-btn::after{
+  content:'';width:14px;height:14px;border-radius:50%;
+  background:var(--ink);transition:transform .3s;flex-shrink:0;
+}
+[data-theme="light"] .theme-btn::after{transform:translateX(16px)}
+
+/* HERO */
+.hero{
+  padding:140px 48px 80px;
+  border-bottom:1px solid var(--border);
+  position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;top:0;left:0;right:0;bottom:0;
+  background:radial-gradient(ellipse 60% 50% at 20% 50%, rgba(255,255,255,.03) 0%, transparent 70%);
+  pointer-events:none;
+}
+.hero-label{
+  font-size:10px;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--ink30);margin-bottom:24px;
+  display:flex;align-items:center;gap:12px;
+}
+.hero-label::before{content:'';display:block;width:32px;height:1px;background:var(--ink30)}
+.hero-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(48px,6vw,80px);
+  line-height:1.05;font-weight:700;
+  margin-bottom:24px;letter-spacing:-.01em;
+}
+.hero-title em{font-style:italic;opacity:.5}
+.hero-meta{
+  font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink30);
+}
+.hero-img-strip{
+  display:flex;gap:4px;margin-top:48px;height:180px;overflow:hidden;
+  margin-left:-48px;margin-right:-48px;
+}
+.hero-img-strip img{
+  flex:1;object-fit:cover;opacity:0.45;filter:grayscale(20%);
+  transition:opacity .4s;
+}
+.hero-img-strip img:hover{opacity:0.65}
+.section-img{
+  width:100%;height:200px;object-fit:cover;
+  opacity:0.35;filter:grayscale(15%);
+  margin-bottom:32px;display:block;
+}
+
+/* CONTENT */
+.content{
+  max-width:760px;margin:0 auto;
+  padding:80px 48px 120px;
+}
+.section{margin-bottom:64px}
+.section-num{
+  font-family:'Bebas Neue',sans-serif;font-size:11px;
+  letter-spacing:.2em;color:var(--ink30);
+  margin-bottom:16px;
+  display:flex;align-items:center;gap:10px;
+}
+.section-num::after{content:'';flex:1;height:1px;background:var(--border)}
+h2{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(22px,2.5vw,28px);
+  font-weight:700;line-height:1.2;
+  margin-bottom:20px;letter-spacing:-.01em;
+}
+p{color:var(--ink50);margin-bottom:16px;line-height:1.85}
+p:last-child{margin-bottom:0}
+ul{color:var(--ink50);padding-left:0;list-style:none;margin-bottom:16px}
+ul li{
+  padding:10px 0 10px 20px;
+  border-bottom:1px solid var(--border);
+  position:relative;line-height:1.7;
+}
+ul li:first-child{border-top:1px solid var(--border)}
+ul li::before{
+  content:'';position:absolute;left:0;top:18px;
+  width:6px;height:1px;background:var(--ink30);
+}
+a{color:var(--ink);text-underline-offset:3px}
+a:hover{opacity:.6}
+strong{color:var(--ink);font-weight:500}
+.contact-box{
+  margin-top:48px;padding:32px;
+  border:1px solid var(--border);
+  position:relative;overflow:hidden;
+}
+.contact-box::before{
+  content:'';position:absolute;top:0;left:0;width:2px;height:100%;
+  background:var(--ink30);
+}
+.contact-box p{margin-bottom:8px}
+.contact-box a{font-weight:500}
+
+/* FOOTER */
+footer{
+  padding:32px 48px;
+  border-top:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;
+  background:var(--paper);
+}
+.ft-copy{font-size:11px;color:var(--ink30);letter-spacing:.05em}
+.ft-links{display:flex;gap:24px}
+.ft-links a{font-size:11px;color:var(--ink30);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;transition:color .3s}
+.ft-links a:hover{color:var(--ink)}
+
+@media(max-width:768px){
+  .hero-img-strip{margin-left:-20px;margin-right:-20px;height:120px}
+  nav{padding:0 20px;height:56px}
+  .hero{padding:96px 20px 48px}
+  .hero-title{font-size:clamp(36px,10vw,56px)}
+  .content{padding:48px 20px 80px}
+  footer{padding:24px 20px;flex-direction:column;gap:16px;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="site_fixed-11.html" class="nav-logo">AI <span>BUREAU</span></a>
+  <a href="site_fixed-11.html" class="nav-back">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    Back to AI Bureau
+  </a>
+  <button class="theme-btn" id="tm" aria-label="Toggle theme"></button>
+</nav>
+
+<div class="hero">
+  <div class="hero-label">Legal Document</div>
+  <h1 class="hero-title">Privacy <em>&</em><br>Data Policy</h1>
+  <div class="hero-meta">Effective: March 2026 &nbsp;·&nbsp; AI Bureau &nbsp;·&nbsp; aibureau.io</div>
+  <div class="hero-img-strip">
+    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80" alt="">
+    <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&q=80" alt="">
+    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80" alt="">
+    <img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?w=600&q=80" alt="">
+    <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&q=80" alt="">
+  </div>
+</div>
+
+<div class="content">
+
+  <div class="section">
+    <div class="section-num">01 — Overview</div>
+    <h2>We keep it simple</h2>
+    <p>AI Bureau ("we", "us", "our") operates aibureau.io — a public editorial directory of AI companies, models, and founders. This policy explains what data we collect, why, and how we handle it.</p>
+    <p>We don't sell your data. We don't share it with advertisers. We don't build profiles on you. We use minimal analytics to understand how the site is used so we can improve it.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-num">02 — What We Collect</div>
+    <img class="section-img" src="https://images.unsplash.com/photo-1633265486064-086b219458ec?w=900&q=80" alt=""><h2>Data we may collect</h2>
+    <ul>
+      <li><strong>Analytics data</strong> — page views, session duration, device type, browser, and country. Collected anonymously with no personally identifiable information.</li>
+      <li><strong>Cookie consent preference</strong> — we store whether you accepted or declined cookies locally in your browser. This never leaves your device.</li>
+      <li><strong>Technical logs</strong> — our hosting provider may log IP addresses briefly for security and abuse prevention. These are not stored long-term.</li>
+    </ul>
+    <p>We do <strong>not</strong> collect: names, email addresses, account information, payment details, or any form of personal identification. No account is required to use AI Bureau.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-num">03 — Cookies</div>
+    <h2>How we use cookies</h2>
+    <p>We use one functional cookie to remember your consent preference. If you accept analytics, a minimal analytics script may set additional anonymous cookies to measure site traffic.</p>
+    <ul>
+      <li><strong>ai-bureau-cookie</strong> — stores your consent choice (accept/decline). Expires after 1 year.</li>
+      <li><strong>Analytics cookies</strong> — only set if you click Accept. Anonymous identifiers used to count visits and measure performance.</li>
+    </ul>
+    <p>You can withdraw your consent at any time by clearing your browser cookies or clicking Decline on the cookie banner (which appears after clearing site data).</p>
+  </div>
+
+  <div class="section">
+    <div class="section-num">04 — Third Parties</div>
+    <h2>External services we use</h2>
+    <ul>
+      <li><strong>Unsplash</strong> — images are served directly from images.unsplash.com. Your browser makes a direct request to Unsplash's CDN. Unsplash may log this per their own privacy policy.</li>
+      <li><strong>Google Fonts</strong> — fonts are loaded from fonts.googleapis.com. Google may log font requests per their privacy policy.</li>
+      <li><strong>SimpleIcons CDN</strong> — company logos loaded from cdn.simpleicons.org.</li>
+    </ul>
+    <p>We have no advertising partners, no data brokers, and no affiliate tracking on this site.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-num">05 — Your Rights</div>
+    <h2>GDPR & your rights</h2>
+    <p>If you are in the European Economic Area (EEA), you have rights under GDPR including the right to access, correct, or delete any personal data we hold. Since we collect no personal data, there is typically nothing to access or delete beyond your browser's local cookie storage, which you control directly.</p>
+    <ul>
+      <li><strong>Right to access</strong> — request what data we hold about you</li>
+      <li><strong>Right to deletion</strong> — request erasure of your data</li>
+      <li><strong>Right to withdraw consent</strong> — clear your browser cookies at any time</li>
+      <li><strong>Right to complain</strong> — lodge a complaint with your local data protection authority</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-num">06 — Content Disclaimer</div>
+    <h2>About our editorial data</h2>
+    <p>All company valuations, funding figures, user counts, and model benchmarks published on AI Bureau are sourced from public records, press releases, and publicly available research. This data is presented for informational purposes only and may not reflect the most current figures.</p>
+    <p>AI Bureau is an independent editorial publication and is not affiliated with, endorsed by, or sponsored by any of the companies listed on this site.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-num">07 — Changes</div>
+    <h2>Updates to this policy</h2>
+    <p>We may update this Privacy Policy from time to time. The effective date at the top of this page will always reflect the most recent revision. Continued use of the site after changes constitutes acceptance of the updated policy.</p>
+  </div>
+
+  <div class="contact-box">
+    <p><strong>Questions about this policy?</strong></p>
+    <p>We're a small independent publication. If you have any privacy-related questions or requests, you can reach us at <a href="mailto:aibureauio@gmail.com">aibureauio@gmail.com</a>. We aim to respond within 30 days.</p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="ft-copy">© 2026 AI Bureau. All rights reserved.</div>
+  <div class="ft-links">
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="site_fixed-11.html">Home</a>
+  </div>
+</footer>
+
+<script>
+const tm=document.getElementById('tm');
+const html=document.documentElement;
+const saved=localStorage.getItem('ab-theme');
+if(saved)ht
