@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Disclaimer — AI Bureau</title>
+<meta name="description" content="Important disclaimer regarding AI Bureau's content, affiliate relationships, adult content, pricing accuracy and liability limitations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#000;
+  --surface:#0a0a12;
+  --border:rgba(255,255,255,.07);
+  --ink:#fff;
+  --ink50:rgba(255,255,255,.5);
+  --ink35:rgba(255,255,255,.35);
+  --ink20:rgba(255,255,255,.2);
+  --ink10:rgba(255,255,255,.1);
+  --cyan:#0CE4FA;
+  --cyan-dim:rgba(12,228,250,.08);
+  --cyan-border:rgba(12,228,250,.2);
+}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Inter',sans-serif;
+  font-size:14px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+/* ── NAV ── */
+nav{
+  position:sticky;top:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 20px;height:58px;
+  background:rgba(0,0,0,.9);
+  border-bottom:1px solid var(--border);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+}
+.nav-logo{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:20px;letter-spacing:.14em;
+  color:var(--ink);text-decoration:none;
+  display:flex;align-items:center;gap:8px;
+}
+.nav-logo span{opacity:.3;}
+.nav-back{
+  display:flex;align-items:center;gap:7px;
+  font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink35);text-decoration:none;
+  padding:7px 14px;border-radius:20px;
+  border:1px solid var(--border);
+  background:transparent;transition:all .2s;
+}
+.nav-back:hover{color:var(--ink);border-color:rgba(255,255,255,.2);}
+.nav-back svg{flex-shrink:0;}
+
+/* ── HERO ── */
+.hero{
+  position:relative;overflow:hidden;
+  min-height:320px;
+  display:flex;align-items:flex-end;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  display:grid;grid-template-columns:1fr 1fr 1fr;
+  gap:2px;
+}
+.hero-bg-img{overflow:hidden;}
+.hero-bg-img img{width:100%;height:320px;object-fit:cover;filter:brightness(.25) grayscale(.2);}
+.hero-fade{
+  position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(0,0,0,.5) 0%,rgba(0,0,0,.7) 60%,#000 100%);
+}
+.hero-content{
+  position:relative;z-index:2;
+  padding:0 24px 40px;width:100%;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:9px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;
+  color:rgba(12,228,250,.7);margin-bottom:14px;
+}
+.eyebrow-line{width:28px;height:1px;background:linear-gradient(90deg,transparent,rgba(12,228,250,.4));}
+.eyebrow-line.r{background:linear-gradient(90deg,rgba(12,228,250,.4),transparent);}
+.hero-title{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(44px,12vw,72px);
+  letter-spacing:.03em;line-height:.95;
+  color:#fff;margin-bottom:12px;
+}
+.hero-sub{
+  font-size:12px;color:var(--ink35);
+  max-width:440px;line-height:1.65;
+}
+
+/* ── MAIN CONTENT ── */
+.page-wrap{max-width:720px;margin:0 auto;padding:56px 20px 80px;}
+
+/* Date badge */
+.date-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:6px 14px;border-radius:20px;
+  border:1px solid var(--border);
+  background:var(--surface);
+  font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--ink35);margin-bottom:40px;
+}
+
+/* Section blocks */
+.disc-block{
+  margin-bottom:2px;
+  border:1px solid var(--border);
+  border-radius:14px;
+  overflow:hidden;
+  background:var(--surface);
+}
+.disc-block+.disc-block{margin-top:12px;}
+
+.disc-block-header{
+  display:grid;grid-template-columns:44px 1fr;
+  align-items:center;gap:0;
+}
+.disc-icon-col{
+  width:44px;height:auto;min-height:60px;
+  display:flex;align-items:center;justify-content:center;
+  border-right:1px solid var(--border);
+  flex-shrink:0;
+  padding:16px 0;
+}
+.disc-header-text{padding:16px 18px;}
+.disc-title{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:17px;letter-spacing:.06em;color:var(--ink);
+  line-height:1;margin-bottom:4px;
+}
+.disc-subtitle{font-size:9.5px;color:var(--ink35);line-height:1.4;}
+
+.disc-body{
+  padding:16px 18px 18px;
+  border-top:1px solid var(--border);
+  font-size:12.5px;color:var(--ink35);
+  line-height:1.75;
+}
+.disc-body p+p{margin-top:10px;}
+.disc-body strong{color:var(--ink50);font-weight:600;}
+.disc-body a{color:var(--cyan);text-decoration:none;border-bottom:1px solid rgba(12,228,250,.25);}
+.disc-body a:hover{border-color:var(--cyan);}
+
+/* Warning block */
+.disc-block.warning .disc-icon-col{background:rgba(251,191,36,.04);}
+.disc-block.warning .disc-title{color:rgba(251,191,36,.9);}
+.disc-block.warning .disc-icon-col svg{color:rgba(251,191,36,.7);}
+.disc-block.warning{border-color:rgba(251,191,36,.15);}
+
+/* Adult content block */
+.disc-block.adult .disc-icon-col{background:rgba(255,50,80,.04);}
+.disc-block.adult{border-color:rgba(255,50,80,.15);}
+.disc-block.adult .disc-title{color:rgba(255,100,120,.9);}
+.disc-block.adult .disc-icon-col svg{color:rgba(255,80,100,.7);}
+
+/* Affiliate */
+.disc-block.affiliate .disc-icon-col{background:rgba(12,228,250,.03);}
+.disc-block.affiliate{border-color:var(--cyan-border);}
+.disc-block.affiliate .disc-icon-col svg{color:var(--cyan);}
+
+/* Bullet list */
+.disc-list{list-style:none;margin-top:10px;display:flex;flex-direction:column;gap:7px;}
+.disc-list li{
+  display:flex;align-items:flex-start;gap:9px;
+  font-size:12px;color:var(--ink35);line-height:1.6;
+}
+.disc-list li svg{flex-shrink:0;margin-top:3px;opacity:.5;}
+
+/* Key points strip */
+.key-points{
+  display:grid;grid-template-columns:1fr 1fr;gap:8px;
+  margin:32px 0 40px;
+}
+.key-point{
+  padding:14px 16px;border-radius:12px;
+  border:1px solid var(--border);
+  background:var(--surface);
+}
+.key-point-icon{
+  width:28px;height:28px;border-radius:8px;
+  border:1px solid var(--border);
+  background:rgba(255,255,255,.03);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:10px;
+}
+.key-point-title{font-size:10.5px;font-weight:700;color:var(--ink);margin-bottom:4px;}
+.key-point-text{font-size:9.5px;color:var(--ink35);line-height:1.5;}
+
+/* Divider */
+.page-divider{
+  height:1px;background:var(--border);
+  margin:40px 0;position:relative;
+}
+.page-divider::after{
+  content:'AI BUREAU';
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  font-family:'Bebas Neue',sans-serif;font-size:10px;letter-spacing:.3em;
+  color:var(--ink20);background:var(--bg);padding:0 12px;
+}
+
+/* Final note */
+.final-note{
+  padding:20px;border-radius:12px;
+  border:1px solid var(--border);
+  background:var(--surface);
+  display:flex;gap:14px;align-items:flex-start;
+  margin-top:32px;
+}
+.final-note-icon{
+  width:36px;height:36px;border-radius:10px;
+  border:1px solid var(--border);background:rgba(255,255,255,.03);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.final-note-text{font-size:11px;color:var(--ink35);line-height:1.7;}
+.final-note-text strong{color:var(--ink50);}
+
+/* ── FOOTER ── */
+.page-footer{
+  border-top:1px solid var(--border);
+  padding:28px 20px;
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:14px;
+}
+.page-footer-links{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+.page-footer-links a{font-size:10px;color:var(--ink35);text-decoration:none;letter-spacing:.06em;transition:color .2s;}
+.page-footer-links a:hover{color:var(--ink);}
+.page-footer-copy{font-size:10px;color:var(--ink20);letter-spacing:.06em;}
+
+@media(max-width:600px){
+  .hero-bg{grid-template-columns:1fr 1fr;}
+  .hero-bg-img:nth-child(3){display:none;}
+  .key-points{grid-template-columns:1fr;}
+  .page-footer{flex-direction:column;align-items:flex-start;}
+  .disc-block-header{grid-template-columns:40px 1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">AI <span>BUREAU</span></a>
+  <a href="/" class="nav-back">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    Back to Site
+  </a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg">
+    <div class="hero-bg-img"><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80&fit=crop" alt="" loading="eager"></div>
+    <div class="hero-bg-img"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80&fit=crop" alt="" loading="eager"></div>
+    <div class="hero-bg-img"><img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&q=80&fit=crop" alt="" loading="eager"></div>
+  </div>
+  <div class="hero-fade"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <div class="eyebrow-line"></div>
+      Legal &amp; Editorial
+      <div class="eyebrow-line r"></div>
+    </div>
+    <h1 class="hero-title">Disclaimer</h1>
+    <p class="hero-sub">Important information about our content, pricing data, affiliate relationships, and adult content policies.</p>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="page-wrap">
+
+  <div class="date-badge">
+    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    Last Updated: March 2026
+  </div>
+
+  <!-- Key points grid -->
+  <div class="key-points">
+    <div class="key-point">
+      <div class="key-point-icon">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      </div>
+      <div class="key-point-title">Information Only</div>
+      <div class="key-point-text">AI Bureau is an editorial directory. Nothing here is financial, legal, or professional advice.</div>
+    </div>
+    <div class="key-point">
+      <div class="key-point-icon">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      </div>
+      <div class="key-point-title">Pricing Changes</div>
+      <div class="key-point-text">All pricing data is verified at time of publication. Verify directly before subscribing.</div>
+    </div>
+    <div class="key-point">
+      <div class="key-point-icon">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+      </div>
+      <div class="key-point-title">External Links</div>
+      <div class="key-point-text">We link to third-party platforms. We are not responsible for their content or practices.</div>
+    </div>
+    <div class="key-point">
+      <div class="key-point-icon">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <div class="key-point-title">18+ Content</div>
+      <div class="key-point-text">Sections covering adult AI tools are intended for adults only. We do not host adult content.</div>
+    </div>
+  </div>
+
+  <!-- Block 1: General -->
+  <div class="disc-block">
+    <div class="disc-block-header">
+      <div class="disc-icon-col">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.45)" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      </div>
+      <div class="disc-header-text">
+        <div class="disc-title">General Information Disclaimer</div>
+        <div class="disc-subtitle">Editorial intent and accuracy limitations</div>
+      </div>
+    </div>
+    <div class="disc-body">
+      <p>AI Bureau (<strong>aibureau.com</strong>) is an independent editorial directory providing information about artificial intelligence tools, platforms, companies, and pricing. All content is published for <strong>informational and educational purposes only</strong>.</p>
+      <p>While we make every reasonable effort to ensure accuracy, the AI landscape changes rapidly. Model capabilities, pricing plans, usage limits, and platform availability can change without notice. <strong>AI Bureau makes no warranties — express or implied — regarding the completeness, accuracy, or timeliness of any information published on this site.</strong></p>
+      <p>Nothing on this site constitutes professional advice of any kind — including but not limited to financial, legal, technical, medical, or business advice. Always verify information independently before making decisions based on content found here.</p>
+    </div>
+  </div>
+
+  <!-- Block 2: Pricing -->
+  <div class="disc-block warning">
+    <div class="disc-block-header">
+      <div class="disc-icon-col">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      </div>
+      <div class="disc-header-text">
+        <div class="disc-title">Pricing &amp; Credit Data</div>
+        <div class="disc-subtitle">Verified at time of publication — always confirm before purchasing</div>
+      </div>
+    </div>
+    <div class="disc-body">
+      <p>All pricing, credit costs, usage limits, and plan comparisons published on AI Bureau are researched and verified at the time of publication. <strong>Prices, credit allocations, and platform features change frequently</strong> — sometimes daily.</p>
+      <ul class="disc-list">
+        <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>Always verify pricing directly on the platform's official website before subscribing or purchasing credits.</li>
+        <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>Credit costs per generation may vary based on resolution, model selection, queue type, and account status.</li>
+        <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>Free tier limits are subject to change without notice. Platforms may remove, reduce, or modify free tiers at any time.</li>
+        <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>AI Bureau is not responsible for any financial loss resulting from decisions made based on pricing data published on this site.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Block 3: Affiliate -->
+  <div class="disc-block affiliate">
+    <div class="disc-block-header">
+      <div class="disc-icon-col">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+      </div>
+      <div class="disc-header-text">
+        <div class="disc-title">Affiliate &amp; Commercial Relationships</div>
+        <div class="disc-subtitle">Transparency about how we may earn revenue</div>
+      </div>
+    </div>
+    <div class="disc-body">
+      <p>Some links on AI Bureau may be affiliate links. This means we may receive a commission if you click through and make a purchase — <strong>at no additional cost to you</strong>. Affiliate relationships do not influence our editorial ratings, rankings, or comparisons.</p>
+      <p>AI Bureau does not accept payment to rank any AI tool higher than it deserves, or to suppress negative information about any platform. Our ratings are based on independent research, verified pricing data, and editorial judgment.</p>
+      <p>Where commercial relationships exist, we endeavour to disclose them clearly. If you have questions about a specific partnership, contact us directly.</p>
+    </div>
+  </div>
+
+  <!-- Block 4: Adult content -->
+  <div class="disc-block adult">
+    <div class="disc-block-header">
+      <div class="disc-icon-col">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+      </div>
+      <div class="disc-header-text">
+        <div class="disc-title">Adult Content — 18+ Notice</div>
+        <div class="disc-subtitle">Our Uncensored AI Guide is intended for adults only</div>
+      </div>
+    </div>
+    <div class="disc-body">
+      <p>AI Bureau includes an editorial section covering AI platforms that offer adult or NSFW (Not Safe For Work) content generation. <strong>This section is intended solely for adults aged 18 or older</strong> (or the age of majority in your jurisdiction, whichever is higher).</p>
+      <p>AI Bureau does <strong>not</strong> host, generate, display, or distribute adult content of any kind. We provide factual editorial information about third-party platforms that offer such capabilities. All adult content is generated, hosted, and moderated solely by those third-party platforms.</p>
+      <ul class="disc-list">
+        <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>We do not verify the age of users accessing our site. By accessing the adult section, you confirm you are of legal age.</li>
+        <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>AI Bureau has no control over the content generated on third-party adult AI platforms we reference.</li>
+        <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>The legality of adult AI-generated content varies by jurisdiction. You are solely responsible for compliance with local laws.</li>
+        <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>AI Bureau strictly opposes any use of AI to generate content involving minors. Any platform found to permit such content will be immediately removed from our directory.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Block 5: Liability -->
+  <div class="disc-block">
+    <div class="disc-block-header">
+      <div class="disc-icon-col">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.45)" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div class="disc-header-text">
+        <div class="disc-title">Limitation of Liability</div>
+        <div class="disc-subtitle">To the fullest extent permitted by applicable law</div>
+      </div>
+    </div>
+    <div class="disc-body">
+      <p>To the fullest extent permitted by law, AI Bureau, its editors, contributors, and operators shall not be liable for any direct, indirect, incidental, consequential, or punitive damages arising from:</p>
+      <ul class="disc-list">
+        <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Your use of, or inability to use, information found on this site</li>
+        <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Decisions made based on pricing, rating, or feature information published here</li>
+        <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Your use of any third-party platform, tool, or service we reference or link to</li>
+        <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Content generated by AI tools described on this site</li>
+        <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Inaccuracies in AI capability descriptions, benchmark scores, or comparative ratings</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Block 6: Accuracy & AI -->
+  <div class="disc-block">
+    <div class="disc-block-header">
+      <div class="disc-icon-col">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.45)" stroke-width="1.8"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      </div>
+      <div class="disc-header-text">
+        <div class="disc-title">AI Ratings &amp; Benchmarks</div>
+        <div class="disc-subtitle">How our scores are determined and their limitations</div>
+      </div>
+    </div>
+    <div class="disc-body">
+      <p>Ratings, scores, and rankings on AI Bureau represent our editors' independent assessments based on publicly available benchmarks, pricing data, feature sets, and real-world testing at a point in time. <strong>These are editorial opinions, not objective truths.</strong></p>
+      <p>AI model capabilities evolve rapidly. A model rated highly today may be superseded by a newer release within weeks. Our scores should be treated as a starting point for your own research, not as definitive rankings.</p>
+      <p>Benchmark scores (MMLU, HumanEval, etc.) referenced on this site are sourced from public research papers and official model cards. We do not conduct our own benchmark testing.</p>
+    </div>
+  </div>
+
+  <!-- Block 7: Intellectual property -->
+  <div class="disc-block">
+    <div class="disc-block-header">
+      <div class="disc-icon-col">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.45)" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M14.31 8l-5.73 9.9M9.69 8l5.73 9.9"/></svg>
+      </div>
+      <div class="disc-header-text">
+        <div class="disc-title">Intellectual Property</div>
+        <div class="disc-subtitle">Trademarks, logos, and third-party ownership</div>
+      </div>
+    </div>
+    <div class="disc-body">
+      <p>All product names, logos, brands, and trademarks referenced on AI Bureau — including but not limited to OpenAI, Anthropic, Google, Meta, Midjourney, ElevenLabs, and others — are the property of their respective owners.</p>
+      <p>Reference to these names and brands does not imply endorsement, affiliation, or sponsorship by or of those companies. Product logos displayed on this site are retrieved from publicly available sources for identification purposes only.</p>
+      <p>AI Bureau's original editorial content, ratings, design, and copy are copyright © 2026 AI Bureau / Ribons. Reproduction without permission is prohibited.</p>
+    </div>
+  </div>
+
+  <div class="page-divider"></div>
+
+  <!-- Final note -->
+  <div class="final-note">
+    <div class="final-note-icon">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    </div>
+    <div class="final-note-text">
+      <strong>Questions or concerns?</strong> If you believe any information on AI Bureau is inaccurate, outdated, or misleading, or if you represent a company listed on our site and wish to provide updated information, please contact us. We are committed to maintaining the highest standards of editorial accuracy.
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="page-footer">
+  <div class="page-footer-links">
+    <a href="/">Home</a>
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/terms.html">Terms of Use</a>
+    <a href="/disclaimer.html" style="color:rgba(255,255,255,.65);">Disclaimer</a>
+  </div>
+  <div class="page-footer-copy">&#169; 2026 AI Bureau &mdash; A Ribons Website</div>
+</footer>
+
+</body>
+</html>
